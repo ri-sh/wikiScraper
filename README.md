@@ -31,15 +31,23 @@ Manchester United Csv
 
 
 
- * **getPremLeague.py**
-###### takes the wiki url of football club season list url 
-######    in form 
-######<"http://en.wikipedia.org/wiki/List_of_"+" _Manchester_United_F.C._"+"_seasons">
+ * getPremLeague.py
+###### takes the wiki url of football club season list url is
 
+######    in form <"http://en.wikipedia.org/wiki/List_of_"+" FOotball team name_F.C."+"_seasons">
+######    returns a dictionary containing
+######    {
+######        'Years': a numpy array of the year of prem league match starting from 1992 to 2103
+######        'Wins':  a numpy array of year wise no of matches won
+######        'Draw':  a numpy array of year wise no of matches draw
+######        'Lose':  a numpy array of year wise no of matches lost
+######        'Position': a list containg the rank of the team in  year
+######        'Topscorer': a list containing the Top Goal Scorer
+######        'Topgoals':  a list containing the Top Goal scored by the top scorer
+######    }
 
-* **teamList.py** 
-
+* teamList.py -
 ###### contains list of team name in Premier league
-* writeCsv.py
-
+*writeCsv.py -
+###### generates the csv file for example 
 
