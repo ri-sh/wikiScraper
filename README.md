@@ -2,26 +2,7 @@
 
 ##Scraper to scrape Premier League Data From Wikipedia using BeautifulSoup 
 
- *getPremLeague.py-
-###### takes the wiki url of football club season list url is
-
-######    in form <"http://en.wikipedia.org/wiki/List_of_"+" FOotball team name_F.C."+"_seasons">
-######    returns a dictionary containing
-######    {
-######        'Years': a numpy array of the year of prem league match starting from 1992 to 2103
-######        'Wins':  a numpy array of year wise no of matches won
-######        'Draw':  a numpy array of year wise no of matches draw
-######        'Lose':  a numpy array of year wise no of matches lost
-######        'Position': a list containg the rank of the team in  year
-######        'Topscorer': a list containing the Top Goal Scorer
-######        'Topgoals':  a list containing the Top Goal scored by the top scorer
-######    }
-
-*teamList.py -
-###### contains list of team name in Premier league
-*writeCsv.py -
-###### generates the csv file for example 
-
+Manchester United Csv
 
 | Season | Won | Draws | Lost | Position | Top goalscorer       | Goals |
 |--------|-----|-------|------|----------|----------------------|-------|
@@ -48,4 +29,25 @@
 | 2012   | 28  | 5     | 5    | 1st      | Robin van Persie     | 30    |
 | 2013   | 19  | 7     | 7    | 7th      | Wayne Rooney         | 19    |
 
+
+
+ * getPremLeague.py-
+###### takes the wiki url of football club season list url is
+
+######    in form <"http://en.wikipedia.org/wiki/List_of_"+" FOotball team name_F.C."+"_seasons">
+######    returns a dictionary containing
+######    {
+######        'Years': a numpy array of the year of prem league match starting from 1992 to 2103
+######        'Wins':  a numpy array of year wise no of matches won
+######        'Draw':  a numpy array of year wise no of matches draw
+######        'Lose':  a numpy array of year wise no of matches lost
+######        'Position': a list containg the rank of the team in  year
+######        'Topscorer': a list containing the Top Goal Scorer
+######        'Topgoals':  a list containing the Top Goal scored by the top scorer
+######    }
+
+* teamList.py -
+###### contains list of team name in Premier league
+*writeCsv.py -
+###### generates the csv file for example 
 
