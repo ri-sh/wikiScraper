@@ -20,7 +20,7 @@ for row in cells:
     if (len(m)>0):
         print BeautifulSoup(str(m[1])).find_all("span", { "class" : "fn" })
         names=BeautifulSoup(str(m[1])).find_all("span", { "class" : "fn" })
-        links=["http://en.wikipedia.org/"+re.search(r'href=[\'"]?([^\'" >]+)', str(name)).group(0).split("=")[1] for name in names ]
+        links=["http://en.wikipedia.org/"+re.search(r'href=[\'"]?([^\'" >]+)', str(name)).group(0).split("=\"/")[1] for name in names ]
         print links
         na=[name.find(text=True).encode('utf-8') for name in names]
         print "############################################"
