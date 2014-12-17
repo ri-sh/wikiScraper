@@ -59,7 +59,7 @@ def getPremLeague(wiki):
 
             if len(cells) > 4:
                 if(len(cells[2].text)<=2 and len(cells[0].text.encode('ascii','ignore'))>1 ):
-                    print type(cells[0].text),"#",cells[0].text.encode('ascii','ignore')
+                   # print type(cells[0].text),"#",cells[0].text.encode('ascii','ignore')
                     leag=cells[0].text.encode('ascii','xmlcharrefreplace')
                     print leag
                     if("Prem" in leag or ("PL"in leag)):
@@ -118,3 +118,61 @@ def getPremLeague(wiki):
         }
     return Team
 
+teams=list(['Arsenal_F.C.',
+'Aston_Villa_F.C.',
+#'Burnley_F.C.',
+'Chelsea_F.C.',
+'Crystal_Palace_F.C.',
+'Everton_F.C.',
+'Hull_City_A.F.C.',
+#'Leicester_City',
+'Liverpool_F.C.',
+'Manchester_City_F.C.',
+'Manchester_United_F.C.',
+'Newcastle_United_F.C.',
+#'Queens_Park_Rangers',
+#'Southampton_F.C.',
+'Stoke_City_F.C.',
+'Sunderland_A.F.C.',
+'Swansea_City_A.F.C.',
+#'Tottenham_Hotspur_F.C.',
+#'West_Bromwich_Albion',
+#'West_Ham_United',
+]
+)
+
+import csv
+import codecs
+from teamList import teams
+from getPremLeague import *
+
+def writeCsv(teamname):
+    f=open("C:\\Users\\hp\\Desktop\\wikiScraper\\"+teamname[:len(teamname)-1]+".csv",'w')
+    out = csv.writer(f,lineterminator='\n')
+    out.writerow(['Season','Won','Draws','Lost','Position','Top goalscorer','Goals'])
+    Teamdata=''
+
+    wiki="http://en.wikipedia.org/wiki/List_of_"+teamname+"_seasons"
+    print teamname,getPremLeague(wiki)
+    Teamdata=getPremLeague(wiki)
+    for i in range(0,len(Teamdata["Years"])):
+        year=Teamdata["Years"][i]
+        win=Teamdata["Wins"][i]
+        draw=Teamdata["Draws"][i]
+        lose=Teamdata["Lose"][i]
+        pos=Teamdata["Position"][i]
+        tpsc=Teamdata["Topscorer"][i]
+        tpgo=Teamdata["Topgoal"][i]
+
+        out.writerow([year,win,draw,lose,pos,tpsc.encode('utf-8'),tpgo])
+
+    f.close()
+
+
+Teamdata={}
+for key in teams :
+
+    wiki="http://en.wikipedia.org/wiki/List_of_"+key+"_seasons"
+    print key,getPremLeague(wiki)
+    writeCsv(key)
+    Teamdata[key]=getPremLeague(wiki)
