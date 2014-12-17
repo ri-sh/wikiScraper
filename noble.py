@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import urllib2
-
+import re
 wiki = "http://en.wikipedia.org/wiki/List_of_Nobel_laureates"
 header = {'User-Agent': 'Mozilla/5.0'} #Needed to prevent 403 error on Wikipedia
 req = urllib2.Request(wiki,headers=header)
@@ -20,7 +20,8 @@ for row in cells:
     if (len(m)>0):
         print BeautifulSoup(str(m[1])).find_all("span", { "class" : "fn" })
         names=BeautifulSoup(str(m[1])).find_all("span", { "class" : "fn" })
-
+        links=["http://en.wikipedia.org/"+re.search(r'href=[\'"]?([^\'" >]+)', str(name)).group(0).split("=")[1] for name in names ]
+        print links
         na=[name.find(text=True).encode('utf-8') for name in names]
         print "############################################"
         Year.append(int((m[0].find(text=True))))
