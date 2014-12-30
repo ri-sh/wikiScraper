@@ -1,0 +1,337 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Wikiscraper</title>
+  <meta name="description" content="Scraper to scrape Premier League Data From Wikipedia">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Wikiscraper</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">Scraper to scrape Premier League Data From Wikipedia</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/rishabhsixfeet/wikiScraper/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/rishabhsixfeet/wikiScraper/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/rishabhsixfeet/wikiScraper" class="code">View Wikiscraper on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1>
+<a id="wikiscraper" class="anchor" href="#wikiscraper" aria-hidden="true"><span class="octicon octicon-link"></span></a>wikiScraper</h1>
+
+<h2>
+<a id="scraper-to-scrape-premier-league-data-from-wikipedia-using-beautifulsoup" class="anchor" href="#scraper-to-scrape-premier-league-data-from-wikipedia-using-beautifulsoup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scraper to scrape Premier League Data From Wikipedia using BeautifulSoup</h2>
+
+<p>Manchester United Csv</p>
+
+<table>
+<thead>
+<tr>
+<th>Season</th>
+<th>Won</th>
+<th>Draws</th>
+<th>Lost</th>
+<th>Position</th>
+<th>Top goalscorer</th>
+<th>Goals</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1992</td>
+<td>24</td>
+<td>12</td>
+<td>12</td>
+<td>1st</td>
+<td>Mark Hughes</td>
+<td>16</td>
+</tr>
+<tr>
+<td>1993</td>
+<td>27</td>
+<td>11</td>
+<td>11</td>
+<td>1st</td>
+<td>Eric Cantona</td>
+<td>25</td>
+</tr>
+<tr>
+<td>1994</td>
+<td>26</td>
+<td>10</td>
+<td>10</td>
+<td>2nd</td>
+<td>Andrei Kanchelskis</td>
+<td>15</td>
+</tr>
+<tr>
+<td>1995</td>
+<td>25</td>
+<td>7</td>
+<td>7</td>
+<td>1st</td>
+<td>Eric Cantona</td>
+<td>19</td>
+</tr>
+<tr>
+<td>1996</td>
+<td>21</td>
+<td>12</td>
+<td>12</td>
+<td>1st</td>
+<td>Ole Gunnar Solskjaer</td>
+<td>19</td>
+</tr>
+<tr>
+<td>1997</td>
+<td>23</td>
+<td>8</td>
+<td>8</td>
+<td>2nd</td>
+<td>Andy Cole</td>
+<td>25</td>
+</tr>
+<tr>
+<td>1998</td>
+<td>22</td>
+<td>13</td>
+<td>13</td>
+<td>1st</td>
+<td>Dwight Yorke</td>
+<td>29</td>
+</tr>
+<tr>
+<td>1999</td>
+<td>28</td>
+<td>7</td>
+<td>7</td>
+<td>1st</td>
+<td>Andy Cole</td>
+<td>22</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>24</td>
+<td>8</td>
+<td>8</td>
+<td>1st</td>
+<td>Teddy Sheringham</td>
+<td>21</td>
+</tr>
+<tr>
+<td>2001</td>
+<td>24</td>
+<td>5</td>
+<td>5</td>
+<td>3rd</td>
+<td>Ruud van Nistelrooy</td>
+<td>36</td>
+</tr>
+<tr>
+<td>2002</td>
+<td>25</td>
+<td>8</td>
+<td>8</td>
+<td>1st</td>
+<td>Ruud van Nistelrooy</td>
+<td>44</td>
+</tr>
+<tr>
+<td>2003</td>
+<td>23</td>
+<td>6</td>
+<td>6</td>
+<td>3rd</td>
+<td>Ruud van Nistelrooy</td>
+<td>30</td>
+</tr>
+<tr>
+<td>2004</td>
+<td>22</td>
+<td>11</td>
+<td>11</td>
+<td>3rd</td>
+<td>Wayne Rooney</td>
+<td>17</td>
+</tr>
+<tr>
+<td>2005</td>
+<td>25</td>
+<td>8</td>
+<td>8</td>
+<td>2nd</td>
+<td>Ruud van Nistelrooy</td>
+<td>24</td>
+</tr>
+<tr>
+<td>2006</td>
+<td>28</td>
+<td>5</td>
+<td>5</td>
+<td>1st</td>
+<td>Wayne Rooney</td>
+<td>23</td>
+</tr>
+<tr>
+<td>2007</td>
+<td>27</td>
+<td>6</td>
+<td>6</td>
+<td>1st</td>
+<td>Cristiano Ronaldo</td>
+<td>42</td>
+</tr>
+<tr>
+<td>2008</td>
+<td>28</td>
+<td>6</td>
+<td>6</td>
+<td>1st</td>
+<td>Cristiano Ronaldo</td>
+<td>26</td>
+</tr>
+<tr>
+<td>2009</td>
+<td>27</td>
+<td>4</td>
+<td>4</td>
+<td>2nd</td>
+<td>Wayne Rooney</td>
+<td>34</td>
+</tr>
+<tr>
+<td>2010</td>
+<td>23</td>
+<td>11</td>
+<td>11</td>
+<td>1st</td>
+<td>Dimitar Berbatov</td>
+<td>21</td>
+</tr>
+<tr>
+<td>2011</td>
+<td>28</td>
+<td>5</td>
+<td>5</td>
+<td>2nd</td>
+<td>Wayne Rooney</td>
+<td>34</td>
+</tr>
+<tr>
+<td>2012</td>
+<td>28</td>
+<td>5</td>
+<td>5</td>
+<td>1st</td>
+<td>Robin van Persie</td>
+<td>30</td>
+</tr>
+<tr>
+<td>2013</td>
+<td>19</td>
+<td>7</td>
+<td>7</td>
+<td>7th</td>
+<td>Wayne Rooney</td>
+<td>19</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>getPremLeague.py
+###### takes the wiki url of football club season list url is</li>
+</ul>
+
+<h6>
+<a id="in-form-httpenwikipediaorgwikilist_of_-football-team-name_fc_seasons" class="anchor" href="#in-form-httpenwikipediaorgwikilist_of_-football-team-name_fc_seasons" aria-hidden="true"><span class="octicon octicon-link"></span></a>in form &lt;"<a href="http://en.wikipedia.org/wiki/List_of_%22+">http://en.wikipedia.org/wiki/List_of_"+</a>" FOotball team name_F.C."+"_seasons"&gt;</h6>
+
+<h6>
+<a id="returns-a-dictionary-containing" class="anchor" href="#returns-a-dictionary-containing" aria-hidden="true"><span class="octicon octicon-link"></span></a>returns a dictionary containing</h6>
+
+<h6>
+<a id="" class="anchor" href="#" aria-hidden="true"><span class="octicon octicon-link"></span></a>{</h6>
+
+<h6>
+<a id="years-a-numpy-array-of-the-year-of-prem-league-match-starting-from-1992-to-2103" class="anchor" href="#years-a-numpy-array-of-the-year-of-prem-league-match-starting-from-1992-to-2103" aria-hidden="true"><span class="octicon octicon-link"></span></a>'Years': a numpy array of the year of prem league match starting from 1992 to 2103</h6>
+
+<h6>
+<a id="wins--a-numpy-array-of-year-wise-no-of-matches-won" class="anchor" href="#wins--a-numpy-array-of-year-wise-no-of-matches-won" aria-hidden="true"><span class="octicon octicon-link"></span></a>'Wins':  a numpy array of year wise no of matches won</h6>
+
+<h6>
+<a id="draw--a-numpy-array-of-year-wise-no-of-matches-draw" class="anchor" href="#draw--a-numpy-array-of-year-wise-no-of-matches-draw" aria-hidden="true"><span class="octicon octicon-link"></span></a>'Draw':  a numpy array of year wise no of matches draw</h6>
+
+<h6>
+<a id="lose--a-numpy-array-of-year-wise-no-of-matches-lost" class="anchor" href="#lose--a-numpy-array-of-year-wise-no-of-matches-lost" aria-hidden="true"><span class="octicon octicon-link"></span></a>'Lose':  a numpy array of year wise no of matches lost</h6>
+
+<h6>
+<a id="position-a-list-containg-the-rank-of-the-team-in--year" class="anchor" href="#position-a-list-containg-the-rank-of-the-team-in--year" aria-hidden="true"><span class="octicon octicon-link"></span></a>'Position': a list containg the rank of the team in  year</h6>
+
+<h6>
+<a id="topscorer-a-list-containing-the-top-goal-scorer" class="anchor" href="#topscorer-a-list-containing-the-top-goal-scorer" aria-hidden="true"><span class="octicon octicon-link"></span></a>'Topscorer': a list containing the Top Goal Scorer</h6>
+
+<h6>
+<a id="topgoals--a-list-containing-the-top-goal-scored-by-the-top-scorer" class="anchor" href="#topgoals--a-list-containing-the-top-goal-scored-by-the-top-scorer" aria-hidden="true"><span class="octicon octicon-link"></span></a>'Topgoals':  a list containing the Top Goal scored by the top scorer</h6>
+
+<h6>
+<a id="-1" class="anchor" href="#-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>}</h6>
+
+<ul>
+<li>teamList.py -
+###### contains list of team name in Premier league
+*writeCsv.py -
+###### generates the csv file for example </li>
+</ul>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/rishabhsixfeet" class="avatar"><img src="https://avatars0.githubusercontent.com/u/4775466?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/rishabhsixfeet">rishabhsixfeet</a> maintains <a href="https://github.com/rishabhsixfeet/wikiScraper">Wikiscraper</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/rishabhsixfeet/wikiScraper/tarball/master" class="tar">tar</a><a href="https://github.com/rishabhsixfeet/wikiScraper/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-48115091-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+</body>
+</html>
